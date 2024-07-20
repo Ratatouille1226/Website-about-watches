@@ -1,5 +1,4 @@
 /* ОБНУЛЯЮЩИЕ СТИЛИ */
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -53,5 +52,132 @@ h5,
 h6 {
     overflow-wrap: break-word;
 }
-
 /* ОБНУЛЯЮЩИЕ СТИЛИ */
+
+
+
+/* ПЕРЕМЕННЫЕ */
+:root {
+    --main-color: #131735;
+    --dark-color: #222;
+    --big-fz: calc(25px + (45 - 25) * ((100vw + 300px) / (1500 - 300)));
+    --medium-fz: calc(20px + (35 - 20) * ((100vw + 300px) / (1500 - 300)));
+    --small-fz: calc(12px + (18 - 12) * ((100vw + 300px) / (1500 - 300)));
+    --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .5);
+}
+/* ПЕРЕМЕННЫЕ */
+
+
+body {
+    background-color: var(--main-color);
+}
+
+/* HEADER */
+header { 
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--dark-color);
+    z-index: 1000;
+    box-shadow: var(--box-shadow);
+    padding: 2rem 8%;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+header .logo img {
+    width: 3rem;
+}
+
+header span {
+    font-size: var(--medium-fz);
+    color: #fff;
+}
+
+header .navbar ul {
+    display: flex;
+    gap: 3rem;
+}
+
+header .navbar ul li a {
+    font-size: var(--small-fz);
+    color: #fff;
+    position: relative;
+    text-transform: capitalize;
+}
+
+header .navbar ul li a::before {
+    content: "";
+    position: absolute;
+    bottom: -0.5rem;
+    right: 0;
+    width: 0%;
+    height: 0.2rem;
+    background-color: dodgerblue;
+    transition: 0.3s linear;
+}
+
+header .navbar ul li a:hover::before {
+    left: 0;
+    width: 100%;
+}
+
+header #menu {
+    font-size: var(--medium-fz);
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+/* HEADER */
+
+
+/* MEDIA */
+@media (max-width: 900px) {
+    header .navbar{
+        position: fixed;
+        left: 0;
+        top: -150%;
+        width: 100%;
+        background-color:#0e112c;
+        transition: 1s all ease;
+    }
+
+    header .navbar.active{
+        top: 9.2rem;
+        transition: .8s all ease;
+    }
+
+    header #menu {
+        display: block;
+    }
+
+    header .navbar ul {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    header .navbar ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    header .navbar ul li a {
+        display: block;
+        background-color: var(--main-color);
+        padding: .5rem;
+        box-shadow: var(--box-shadow);
+    }
+
+    header .fa-times {
+        transform: rotate(90deg);
+    }
+}
+/* MEDIA */
