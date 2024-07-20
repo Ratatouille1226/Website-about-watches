@@ -67,6 +67,9 @@ h6 {
 }
 /* ПЕРЕМЕННЫЕ */
 
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     background-color: var(--main-color);
@@ -90,6 +93,14 @@ section {
 
 .btn:hover {
     box-shadow: 0 .5rem 20.5rem rgb(53, 243, 53);
+}
+
+.heading {
+    text-align: center;
+    color: #fff;
+    font-size: var(--big-fz);
+    text-transform: capitalize;
+    padding: 10rem;
 }
 
 
@@ -162,7 +173,7 @@ header #menu {
 
 
 
-/* SECTION */
+/* SECTION HOME */
  .home {
     display: flex;
     justify-content: center;
@@ -194,7 +205,193 @@ header #menu {
     margin: 2rem 0rem;
     line-height: 1.2;
  }
-/* SECTION */
+/* SECTION HOME */
+
+
+/* SECTION ABOUT */
+.about .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 3rem;
+}
+
+.about .row .content {
+    flex: 1 1 45rem;
+    padding: 2.5rem;
+}
+
+.about .row .content h3 {
+    font-size: var(--big-fz);
+    color: #fff;
+}
+
+.about .row .content p {
+    font-size: var(--small-fz);
+    color: #fff;
+    padding: 2rem 0rem;
+}
+
+.about .row .content p i {
+    color: dodgerblue;
+    padding-right: 0.5rem;
+}
+
+.about .row .image {
+    flex: 1 1 45rem;
+    text-align: center;
+}
+
+.about .row .image img {
+    border-radius: 1rem;
+}
+/* SECTION ABOUT */
+
+
+/* SECTION FEATURES */
+.features .box-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 4rem;
+}
+
+.features .box-container .box {
+    flex: 1 1 35rem;
+    border: 2px solid rgb(0, 0, 0, .5);
+    background-color: #232323;
+    padding: 1rem;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.features .box-container .box span{
+    position: absolute;
+    display: block;
+    background-color: dodgerblue;
+}
+
+.features .box-container .box span:nth-child(1) {
+    left: 0;
+    top: 0;
+    width: 50.5%;
+    height: 0.2rem;
+    transform: scale(0);
+    transition: .5s;
+    transform-origin: left;
+}
+
+.features .box-container .box:hover span:nth-child(1) {
+    transform: scale(1);
+    transform-origin: right;
+}
+
+.features .box-container .box span:nth-child(2) {
+    right: 0;
+    top: 0;
+    width: 50.5%;
+    height: 0.2rem;
+    transform: scale(0);
+    transition: .5s;
+    transform-origin: right;
+}
+
+.features .box-container .box:hover span:nth-child(2) {
+    transform: scale(1);
+    transform-origin: left;
+}
+
+.features .box-container .box span:nth-child(3) {
+    right: 0;
+    top: 0;
+    width: 0.2rem;
+    height: 100%;
+    transform: scale(0);
+    transition: .5s;
+    transform-origin: bottom;
+    transition-delay: .3s;
+}
+
+.features .box-container .box:hover span:nth-child(3) {
+    transform: scale(1);
+    transform-origin: top;
+}
+
+.features .box-container .box span:nth-child(4) {
+    left: 0;
+    top: 0;
+    width: 0.2rem;
+    height: 100%;
+    transform: scale(0);
+    transition: .5s;
+    transform-origin: bottom;
+    transition-delay: .3s;
+}
+
+.features .box-container .box:hover span:nth-child(4) {
+    transform: scale(1);
+    transform-origin: top;
+}
+
+.features .box-container .box span:nth-child(5) {
+    left: 0;
+    bottom: 0;
+    width: 50.5%;
+    height: 0.2rem;
+    transform: scale(0);
+    transition: .5s;
+    transform-origin: right;
+    transition-delay: .7s;
+}
+
+.features .box-container .box:hover span:nth-child(5) {
+    transform: scale(1);
+    transform-origin: left;
+}
+
+.features .box-container .box span:nth-child(6) {
+    right: 0;
+    bottom: 0;
+    width: 50.5%;
+    height: 0.2rem;
+    transform: scale(0);
+    transition: .5s;
+    transform-origin: left;
+    transition-delay: .7s;
+}
+
+.features .box-container .box:hover span:nth-child(6) {
+    transform: scale(1);
+    transform-origin: right;
+}
+
+.features .box-container .box i{
+    width: 7rem;
+    height: 7rem;
+    background-color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 7rem;
+    font-size: var(--medium-fz);
+    box-shadow: var(--box-shadow);
+}
+
+.features .box-container .box h4{
+    margin: 1.5rem 0rem;
+    color: #fff;
+    font-size: var(--small-fz);
+}
+
+.features .box-container .box p{
+    text-align: justify;
+    color: #fff;
+    font-size: 1.5rem;
+}
+/* SECTION FEATURES */
 
 
 
