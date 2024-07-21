@@ -1,4 +1,4 @@
-
+//Меню
 const menu = document.querySelector('#menu'),
       navbar = document.querySelector('.navbar'),
       close = document.querySelectorAll('.close');
@@ -14,3 +14,22 @@ close.forEach(e => {
         navbar.classList.toggle('active');
     });
 });
+
+
+//Модальное окно
+const openModal = document.querySelectorAll('.modal-open'),
+      closeBtn = document.querySelector('.close-btn');
+
+    openModal.forEach(function (btn) {
+        btn.onclick = function () {
+            let modal = btn.getAttribute('data-modal');
+
+            document.getElementById(modal).style.display = 'flex';
+
+            closeBtn.addEventListener('click', (e) => {
+                document.getElementById(modal).style.display = 'none';
+            });
+        }
+    });
+
+
