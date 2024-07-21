@@ -33,3 +33,10 @@ const openModal = document.querySelectorAll('.modal-open'),
     });
 
 
+//Анимации
+
+AOS.init({
+    delay: 400,
+    duration: 1000
+});
+

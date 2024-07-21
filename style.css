@@ -634,6 +634,104 @@ header #menu {
 /* SECTION PRODUCT */
 
 
+/* SECTION CONTACT */
+.contact .box-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+}
+
+.contact form {
+    flex: 1 1 40rem;
+    background-color: var(--dark-color);
+    padding: 3rem;
+    box-shadow: var(--box-shadow);
+}
+
+.contact form .box {
+    width: 100%;
+    height: 5rem;
+    background: none;
+    border-bottom: 2px solid #fff;
+    font-size: 2rem;
+    margin: 1rem 0rem;
+    color: #fff;
+}
+
+.contact form textarea {
+    width: 100%;
+    height: 5rem;
+    background: none;
+    border-bottom: 2px solid #fff;
+    font-size: 2rem;
+    margin: 1rem 0rem;
+    color: #fff;
+    resize: none;
+}
+
+.contact .btn {
+    width: 100%;
+}
+
+.contact .content {
+    flex: 1 1 40rem;
+    padding: 4rem;
+}
+
+.contact .content h3 {
+    font-size: var(--medium-fz);
+    color: #fff;
+    line-height: 4rem;
+}
+
+.contact .content p {
+    font-size: 1.5rem;
+    color: #fff;
+    padding: 1rem 0rem;
+}
+
+.contact .content .icons {
+    display: flex;
+    align-items: center;
+}
+
+.contact .content .icons p{
+    font-size: 2rem;
+}
+
+.contact .content .icons i{
+    font-size: 2rem;
+    color: dodgerblue;
+    margin-right: 1rem;
+}
+/* SECTION CONTACT */
+
+
+/* FOOTER */
+.footer {
+    background-color: var(--dark-color);
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.footer .share { 
+    padding: 1rem 0rem;
+}
+
+.footer .share h3 { 
+    font-size: var(--small-fz);
+    color: #fff;
+}
+
+.footer .share a { 
+    font-size: var(--small-fz);
+    color: dodgerblue;
+    padding: 1rem;
+}
+/* FOOTER */
+
 
 /* MEDIA */
 @media (max-width: 900px) {
